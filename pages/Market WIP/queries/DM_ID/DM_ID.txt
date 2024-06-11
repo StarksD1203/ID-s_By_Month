@@ -1,3 +1,0 @@
-Select EmployeeId 
-From AllianceEmployee
-Where Name = {{JSONForm1.formData.DM}}

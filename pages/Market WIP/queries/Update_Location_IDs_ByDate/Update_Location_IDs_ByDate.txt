@@ -1,6 +1,0 @@
-Update dbo.Location_IDs_ByDate
-Set dbo.Location_IDs_ByDate.ManagerID = ,
-dbo.Location_IDs_ByDate.DistrictID = ,
-dbo.Location_IDs_ByDate.DirectorID =,
-From dbo.Location_IDs_ByDate
-Join dbo.vw_DM_District_EOM on dbo.loc
