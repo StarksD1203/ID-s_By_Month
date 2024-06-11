@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mssql-plugin",
   "unpublishedAction": {
-    "name": "UpdateManager",
+    "name": "UpdateDM",
     "datasource": {
       "name": "Azure SQL",
       "pluginId": "mssql-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE dbo.MaxDays_Staging SET\n\t\tManagerName = '{{JSONForm1Copy.formData.NewManager}}'\nWHERE StoreID = {{data_table.selectedRow.StoreID}} and Month = {{data_table.selectedRow.Month}};\nUPDATE dbo.MaxDays_Staging SET\nManagerID = dbo.AllianceEmployee.EmployeeId\nFrom dbo.MaxDays_Staging\nJoin dbo.AllianceEmployee  on dbo.AllianceEmployee.Name  = dbo.MaxDays_Staging.ManagerName;\nUpdate dbo.Location_IDs_ByDate\nSet dbo.Location_IDs_ByDate.ManagerID = dbo.MaxDays_Staging.ManagerID\nFrom dbo.Location_IDs_ByDate\nJoin dbo.MaxDays_Staging on dbo.Location_IDs_ByDate.StoreID = dbo.MaxDays_Staging.StoreID\nWhere dbo.MaxDays_Staging.Month = {{data_table.selectedRow.Month}} and dbo.Location_IDs_ByDate.YYYYMM = {{data_table.selectedRow.Month}}",
+      "body": "UPDATE dbo.MaxDays_Staging SET\n\t\tDMName = '{{JSONForm1Copy.formData.NewDM}}'\nWHERE dbo.MaxDays_Staging.DistrictID = {{data_table.selectedRow.DistrictID}} and Month = {{data_table.selectedRow.Month}};\nUPDATE dbo.MaxDays_Staging SET\nDMID = dbo.AllianceEmployee.EmployeeId\nFrom dbo.MaxDays_Staging\nJoin dbo.AllianceEmployee  on dbo.AllianceEmployee.Name  = dbo.MaxDays_Staging.DMName;\nUpdate dbo.Location_IDs_ByDate\nSet dbo.Location_IDs_ByDate.DMID = dbo.MaxDays_Staging.DMID\nFrom dbo.Location_IDs_ByDate\nJoin dbo.MaxDays_Staging on dbo.Location_IDs_ByDate.DMID = dbo.MaxDays_Staging.DMID\nWhere dbo.MaxDays_Staging.Month = {{data_table.selectedRow.Month}} and dbo.Location_IDs_ByDate.YYYYMM = {{data_table.selectedRow.Month}} and dbo.Location_IDs_ByDate.DistrictID = {{data_table.selectedRow.DistrictID}}",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,9 +36,9 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSONForm1Copy.formData.NewManager",
-      "data_table.selectedRow.Month",
-      "data_table.selectedRow.StoreID"
+      "JSONForm1Copy.formData.NewDM",
+      "data_table.selectedRow.DistrictID",
+      "data_table.selectedRow.Month"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
@@ -46,7 +46,7 @@
     "userPermissions": [],
     "createdAt": "2024-05-16T15:05:58Z"
   },
-  "id": "District_UpdateManager",
+  "id": "District_UpdateDM",
   "deleted": false,
   "gitSyncId": "66686f979c5dbf7c4bbe04c4_11bcc57b-48f7-4230-ae67-d8b1e114561f"
 }

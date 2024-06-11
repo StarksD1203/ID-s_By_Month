@@ -68,7 +68,7 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1718124036464,
+    "columnUpdatedAt": 1718125980730,
     "primaryColumnId": "StoreID",
     "columnSizeMap": {
         "task": 245,
@@ -79,8 +79,8 @@
     "defaultPageSize": 0,
     "columnOrder": [
         "StoreID",
-        "Location",
         "Month",
+        "Location",
         "ManagerID",
         "DistrictID",
         "DMID",
@@ -953,7 +953,7 @@
             "allowCellWrapping": false,
             "index": 24,
             "isDiscardVisible": true,
-            "isVisible": false,
+            "isVisible": true,
             "label": "Location",
             "fontStyle": "",
             "textColor": "",
