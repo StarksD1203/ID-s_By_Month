@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mssql-plugin",
   "unpublishedAction": {
-    "name": "Manager",
+    "name": "Directors",
     "datasource": {
       "name": "Azure SQL",
       "pluginId": "mssql-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT DISTINCT Name From AllianceEmployee\nWhere UserTypeName like 'Store Manager' or Name = 'No Manager'\nOrder by Name Asc",
+      "body": "SELECT DISTINCT Name From AllianceEmployee\nWhere UserTypeName like 'Market Director' or Name = 'No Manager' or Name = 'Joseph Lepordo'\nOrder by Name Asc",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -38,7 +38,7 @@
     "userPermissions": [],
     "createdAt": "2024-05-16T15:55:03Z"
   },
-  "id": "Market_Manager",
+  "id": "Market_Directors",
   "deleted": false,
-  "gitSyncId": "66686f979c5dbf7c4bbe04c4_310ea79d-5709-4284-b7b9-02b0748d26fa"
+  "gitSyncId": "66686f979c5dbf7c4bbe04c4_7b1a962b-3dd2-44d4-9fad-9fa689add5f0"
 }

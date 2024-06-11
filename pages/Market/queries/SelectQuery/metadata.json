@@ -15,10 +15,10 @@
     },
     "pageId": "Market",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 100000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM dbo.MaxDays_Staging\nWHERE (Month Like '%{{JSONForm1.formData.MonthFilter}}%' and Location Like '%{{JSONForm1.formData.LocationFilter}}%')\n\n",
+      "body": "SELECT  * FROM dbo.MaxDays_Staging\nWHERE (Month Like '%{{JSONForm1.formData.MonthFilter}}%' and MarketName Like '%{{JSONForm1.formData.DistrictFilter}}%')",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -33,10 +33,12 @@
       }
     ],
     "isValid": true,
-    "invalids": [],
+    "invalids": [
+      "'Query timeout' field must be an integer between 0 and 60000"
+    ],
     "messages": [],
     "jsonPathKeys": [
-      "JSONForm1.formData.LocationFilter",
+      "JSONForm1.formData.DistrictFilter",
       "JSONForm1.formData.MonthFilter"
     ],
     "userSetOnLoad": true,
@@ -47,5 +49,5 @@
   },
   "id": "Market_SelectQuery",
   "deleted": false,
-  "gitSyncId": "66686f979c5dbf7c4bbe04c4_977f2376-35a6-4a0b-963f-7bbd40f9f9e9"
+  "gitSyncId": "66686f979c5dbf7c4bbe04c4_9ca8c5d5-1c9a-4574-9318-8081af63ed2e"
 }

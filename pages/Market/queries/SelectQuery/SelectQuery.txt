@@ -1,3 +1,2 @@
-SELECT * FROM dbo.MaxDays_Staging
-WHERE (Month Like '%{{JSONForm1.formData.MonthFilter}}%' and Location Like '%{{JSONForm1.formData.LocationFilter}}%')
-
+SELECT  * FROM dbo.MaxDays_Staging
+WHERE (Month Like '%{{JSONForm1.formData.MonthFilter}}%' and MarketName Like '%{{JSONForm1.formData.DistrictFilter}}%')

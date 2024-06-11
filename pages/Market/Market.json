@@ -29,24 +29,24 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Market_LocationList",
-              "name": "LocationList",
+              "id": "Market_Alliance_Employees",
+              "name": "Alliance_Employees",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Market_Manager",
-              "name": "Manager",
+              "id": "Market_Directors",
+              "name": "Directors",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Market_ManagerALL",
-              "name": "ManagerALL",
+              "id": "Market_Markets",
+              "name": "Markets",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
@@ -66,10 +66,10 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "JSONForm1.formData.LocationFilter",
+                "JSONForm1.formData.DistrictFilter",
                 "JSONForm1.formData.MonthFilter"
               ],
-              "timeoutInMillisecond": 10000
+              "timeoutInMillisecond": 100000
             }
           ]
         ],
@@ -86,5 +86,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "gitSyncId": "66686f979c5dbf7c4bbe04c4_1cf6002d-73b9-42ae-a0d2-133a098f6ef8"
+  "gitSyncId": "66686f979c5dbf7c4bbe04c4_b1e3c830-1f47-4f91-aa6f-dcaed0683128"
 }

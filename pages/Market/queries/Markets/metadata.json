@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mssql-plugin",
   "unpublishedAction": {
-    "name": "LocationList",
+    "name": "Markets",
     "datasource": {
       "name": "Azure SQL",
       "pluginId": "mssql-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "Select Distinct Name\nFrom dbo.alliancelocation",
+      "body": "Select Distinct MarketName\nFrom AllianceLocation",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,9 +36,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-06-06T18:09:39Z"
+    "createdAt": "2024-06-11T15:53:13Z"
   },
-  "id": "Market_LocationList",
+  "id": "Market_Markets",
   "deleted": false,
-  "gitSyncId": "66686f979c5dbf7c4bbe04c4_61bbe986-e079-41f9-a245-21a94958cf93"
+  "gitSyncId": "66686f979c5dbf7c4bbe04c4_29250761-e6d1-4b1d-a323-e4d9132a030a"
 }
