@@ -1,0 +1,12 @@
+UPDATE dbo.MaxDays_Staging SET
+		DirectorName = '{{JSONForm1Copy.formData.NewDirector}}'
+WHERE dbo.MaxDays_Staging.DirectorID = {{data_table.selectedRow.DirectorID}} and Month = {{data_table.selectedRow.Month}};
+UPDATE dbo.MaxDays_Staging SET
+DirectorID = dbo.AllianceEmployee.EmployeeId
+From dbo.MaxDays_Staging
+Join dbo.AllianceEmployee  on dbo.AllianceEmployee.Name  = dbo.MaxDays_Staging.DirectorName;
+Update dbo.Location_IDs_ByDate
+Set dbo.Location_IDs_ByDate.DirectorID = dbo.MaxDays_Staging.DirectorID
+From dbo.Location_IDs_ByDate
+Join dbo.MaxDays_Staging on dbo.Location_IDs_ByDate.MarketID = dbo.MaxDays_Staging.MarketID
+Where dbo.MaxDays_Staging.Month = {{data_table.selectedRow.Month}} and dbo.Location_IDs_ByDate.YYYYMM = {{data_table.selectedRow.Month}} and dbo.Location_IDs_ByDate.MarketID = {{data_table.selectedRow.MarketID}}

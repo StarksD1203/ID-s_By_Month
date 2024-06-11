@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mssql-plugin",
   "unpublishedAction": {
-    "name": "UpdateDM",
+    "name": "UpdateMarket",
     "datasource": {
       "name": "Azure SQL",
       "pluginId": "mssql-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE dbo.MaxDays_Staging SET\n\t\tDMName = '{{JSONForm1Copy.formData.NewDM}}'\nWHERE dbo.MaxDays_Staging.DistrictID = {{data_table.selectedRow.DistrictID}} and Month = {{data_table.selectedRow.Month}};\nUPDATE dbo.MaxDays_Staging SET\nDMID = dbo.AllianceEmployee.EmployeeId\nFrom dbo.MaxDays_Staging\nJoin dbo.AllianceEmployee  on dbo.AllianceEmployee.Name  = dbo.MaxDays_Staging.DMName;\nUpdate dbo.Location_IDs_ByDate\nSet dbo.Location_IDs_ByDate.DMID = dbo.MaxDays_Staging.DMID\nFrom dbo.Location_IDs_ByDate\nJoin dbo.MaxDays_Staging on dbo.Location_IDs_ByDate.DMID = dbo.MaxDays_Staging.DMID\nWhere dbo.MaxDays_Staging.Month = {{data_table.selectedRow.Month}} and dbo.Location_IDs_ByDate.YYYYMM = {{data_table.selectedRow.Month}} and dbo.Location_IDs_ByDate.DistrictID = {{data_table.selectedRow.DistrictID}}",
+      "body": "UPDATE dbo.MaxDays_Staging SET\n\t\tDirectorName = '{{JSONForm1Copy.formData.NewDirector}}'\nWHERE dbo.MaxDays_Staging.DirectorID = {{data_table.selectedRow.DirectorID}} and Month = {{data_table.selectedRow.Month}};\nUPDATE dbo.MaxDays_Staging SET\nDirectorID = dbo.AllianceEmployee.EmployeeId\nFrom dbo.MaxDays_Staging\nJoin dbo.AllianceEmployee  on dbo.AllianceEmployee.Name  = dbo.MaxDays_Staging.DirectorName;\nUpdate dbo.Location_IDs_ByDate\nSet dbo.Location_IDs_ByDate.DirectorID = dbo.MaxDays_Staging.DirectorID\nFrom dbo.Location_IDs_ByDate\nJoin dbo.MaxDays_Staging on dbo.Location_IDs_ByDate.MarketID = dbo.MaxDays_Staging.MarketID\nWhere dbo.MaxDays_Staging.Month = {{data_table.selectedRow.Month}} and dbo.Location_IDs_ByDate.YYYYMM = {{data_table.selectedRow.Month}} and dbo.Location_IDs_ByDate.MarketID = {{data_table.selectedRow.MarketID}}",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,8 +36,9 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSONForm1Copy.formData.NewDM",
-      "data_table.selectedRow.DistrictID",
+      "JSONForm1Copy.formData.NewDirector",
+      "data_table.selectedRow.DirectorID",
+      "data_table.selectedRow.MarketID",
       "data_table.selectedRow.Month"
     ],
     "userSetOnLoad": false,
@@ -46,7 +47,7 @@
     "userPermissions": [],
     "createdAt": "2024-05-16T15:05:58Z"
   },
-  "id": "Market_UpdateDM",
+  "id": "Market_UpdateMarket",
   "deleted": false,
   "gitSyncId": "66686f979c5dbf7c4bbe04c4_296b0ed9-3754-4d83-8ecb-ce91565d641f"
 }

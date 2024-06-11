@@ -8,5 +8,5 @@ Join dbo.AllianceEmployee  on dbo.AllianceEmployee.Name  = dbo.MaxDays_Staging.D
 Update dbo.Location_IDs_ByDate
 Set dbo.Location_IDs_ByDate.DMID = dbo.MaxDays_Staging.DMID
 From dbo.Location_IDs_ByDate
-Join dbo.MaxDays_Staging on dbo.Location_IDs_ByDate.DMID = dbo.MaxDays_Staging.DMID
+Join dbo.MaxDays_Staging on dbo.Location_IDs_ByDate.DistrictID = dbo.MaxDays_Staging.DistrictID
 Where dbo.MaxDays_Staging.Month = {{data_table.selectedRow.Month}} and dbo.Location_IDs_ByDate.YYYYMM = {{data_table.selectedRow.Month}} and dbo.Location_IDs_ByDate.DistrictID = {{data_table.selectedRow.DistrictID}}
