@@ -1,3 +1,0 @@
-SELECT * FROM dbo.MaxDays_Staging
-WHERE Location like '%{{data_table.searchText || ""}}%' or Month like '%{{data_table.searchText || ""}}%'
-ORDER BY {{data_table.sortOrder.column || 'StoreID'}} {{data_table.sortOrder.order || "ASC"}};

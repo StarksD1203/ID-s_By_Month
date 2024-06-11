@@ -9,4 +9,4 @@ Update dbo.Location_IDs_ByDate
 Set dbo.Location_IDs_ByDate.ManagerID = dbo.MaxDays_Staging.ManagerID
 From dbo.Location_IDs_ByDate
 Join dbo.MaxDays_Staging on dbo.Location_IDs_ByDate.StoreID = dbo.MaxDays_Staging.StoreID
-Where dbo.MaxDays_Staging.Month = {{data_table.selectedRow.Month}} and dbo.Location_IDs_ByDate.YYYYMM = {{data_table.selectedRow.Month}}
+Where dbo.MaxDays_Staging.Month = {{data_table.selectedRow.Month}} and dbo.Location_IDs_ByDate.YYYYMM = {{data_table.selectedRow.Month}} and dbo.MaxDays_Staging.StoreID = {{data_table.selectedRow.StoreID}}

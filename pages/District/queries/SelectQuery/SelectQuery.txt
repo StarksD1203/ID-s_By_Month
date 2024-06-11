@@ -1,0 +1,2 @@
+SELECT  * FROM dbo.MaxDays_Staging
+WHERE (Month Like '%{{JSONForm1.formData.MonthFilter}}%' and DistrictName Like '%{{JSONForm1.formData.DistrictFilter}}%')

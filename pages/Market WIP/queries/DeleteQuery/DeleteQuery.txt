@@ -1,2 +1,0 @@
-DELETE FROM dbo.MaxDays_Staging
-  WHERE StoreID = {{data_table.triggeredRow.StoreID}};
