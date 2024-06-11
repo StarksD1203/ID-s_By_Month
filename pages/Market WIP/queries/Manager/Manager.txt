@@ -1,0 +1,3 @@
+SELECT Name From AllianceEmployee
+Where UserTypeName like 'Store Manager' and TerminationDate IS NULL
+Order by Name Asc

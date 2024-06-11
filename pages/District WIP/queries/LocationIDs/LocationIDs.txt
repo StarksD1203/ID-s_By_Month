@@ -1,0 +1,1 @@
+SELECT * From Location_IDs_ByDate

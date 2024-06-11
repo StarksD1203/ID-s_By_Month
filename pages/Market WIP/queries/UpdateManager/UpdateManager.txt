@@ -1,0 +1,9 @@
+UPDATE dbo.MaxDays_Staging SET
+		ManagerName = '{{JSONForm1.formData.Manager}}',
+		DirectorName = '{{JSONForm1.formData.Director}}',
+		DMName = '{{JSONForm1.formData.DM}}'
+WHERE StoreID = {{data_table.selectedRow.StoreID}} and Month = {{data_table.selectedRow.Month}};
+UPDATE dbo.MaxDays_Staging SET
+ManagerID = dbo.AllianceEmployee .EmployeeId
+From dbo.MaxDays_Staging
+Join dbo.AllianceEmployee  on dbo.AllianceEmployee.Name  = dbo.MaxDays_Staging.ManagerName;
