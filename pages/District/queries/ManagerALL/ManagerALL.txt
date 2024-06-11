@@ -1,2 +1,0 @@
-SELECT Distinct Name From AllianceEmployee
-Where HomeStore != 'Corporate' and (TerminationDate IS NULL or TerminationDate> GetDate()-60) and UserTypeName != 'AT&T Sales Representative'

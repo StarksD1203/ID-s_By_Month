@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mssql-plugin",
   "unpublishedAction": {
-    "name": "Director",
+    "name": "Alliance_Employees",
     "datasource": {
       "name": "Azure SQL",
       "pluginId": "mssql-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT Name From AllianceEmployee\nWhere UserTypeName like 'Market Director' and TerminationDate IS NULL\nOrder by Name Asc",
+      "body": "Select Distinct Name\nFrom AllianceEmployee",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
@@ -36,9 +36,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-05-31T04:51:05Z"
+    "createdAt": "2024-06-11T16:36:59Z"
   },
-  "id": "District_Director",
+  "id": "District_Alliance_Employees",
   "deleted": false,
-  "gitSyncId": "66686f979c5dbf7c4bbe04c4_a4bf0297-d002-4767-a6d6-518f5d9ade16"
+  "gitSyncId": "66686f979c5dbf7c4bbe04c4_476bd333-ee72-40d3-9726-c036ec0932b5"
 }

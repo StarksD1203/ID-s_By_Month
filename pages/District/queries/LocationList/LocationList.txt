@@ -1,2 +1,0 @@
-Select Distinct Name
-From dbo.alliancelocation

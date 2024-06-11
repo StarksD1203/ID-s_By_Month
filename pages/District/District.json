@@ -29,24 +29,24 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "District_LocationList",
-              "name": "LocationList",
+              "id": "District_Alliance_Employees",
+              "name": "Alliance_Employees",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "District_Manager",
-              "name": "Manager",
+              "id": "District_DM",
+              "name": "DM",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "District_ManagerALL",
-              "name": "ManagerALL",
+              "id": "District_Districts",
+              "name": "Districts",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
@@ -66,7 +66,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "JSONForm1.formData.LocationFilter",
+                "JSONForm1.formData.DistrictFilter",
                 "JSONForm1.formData.MonthFilter"
               ],
               "timeoutInMillisecond": 10000

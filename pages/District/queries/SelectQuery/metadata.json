@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM dbo.MaxDays_Staging\nWHERE (Month Like '%{{JSONForm1.formData.MonthFilter}}%' and Location Like '%{{JSONForm1.formData.LocationFilter}}%')\n\n",
+      "body": "SELECT * FROM dbo.MaxDays_Staging\nWHERE (Month Like '%{{JSONForm1.formData.MonthFilter}}%' and DistrictName Like '%{{JSONForm1.formData.DistrictFilter}}%')\n\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,7 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSONForm1.formData.LocationFilter",
+      "JSONForm1.formData.DistrictFilter",
       "JSONForm1.formData.MonthFilter"
     ],
     "userSetOnLoad": true,
