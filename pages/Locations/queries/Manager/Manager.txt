@@ -1,3 +1,2 @@
 SELECT DISTINCT Name From AllianceEmployee
-Where UserTypeName like 'Store Manager' or Name = 'No Manager'
 Order by Name Asc
