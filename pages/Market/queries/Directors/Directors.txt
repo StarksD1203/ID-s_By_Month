@@ -1,3 +1,2 @@
 SELECT DISTINCT Name From AllianceEmployee
-Where UserTypeName like 'Market Director' or Name = 'No Manager' or Name = 'Joseph Lepordo'
 Order by Name Asc
