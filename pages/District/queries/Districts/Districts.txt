@@ -1,2 +1,2 @@
 Select Distinct DistrictName
-From AllianceLocation
+From District

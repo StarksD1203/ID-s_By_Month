@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "Select Distinct DistrictName\nFrom AllianceLocation",
+      "body": "Select Distinct DistrictName\nFrom District",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
